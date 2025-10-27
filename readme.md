@@ -1,7 +1,3 @@
-Com certeza\! Abaixo está a documentação completa do projeto **"Mestre de Puzzles da Mansão"** em formato Markdown.
-
------
-
 # 📜 Documentação do Projeto: Mestre de Puzzles da Mansão
 
 ## 🎯 Enunciado e Objetivo
