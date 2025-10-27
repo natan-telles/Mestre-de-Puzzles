@@ -1,0 +1,58 @@
+[versions]
+# ATUALIZADO: Android Gradle Plugin (AGP) para resolver incompatibilidade. 8.9.1 ou superior é necessário.
+# Vamos usar o 8.4.0, a versão estável mais recente antes do 8.8.0 que está causando problemas.
+agp = "8.4.0"
+kotlin = "2.0.0"
+navigationCompose = "2.7.0" # Versão estável
+
+# ATUALIZADO: Reverter para versões estáveis que não exigem AGP 8.9.1/API 36
+# Mantenha em 1.10.1 ou 1.11.0 (dependendo da sua minSdk)
+coreKtx = "1.10.1"
+junit = "4.13.2"
+junitVersion = "1.1.5" # Revertendo para uma versão estável
+espressoCore = "3.5.1" # Revertendo para uma versão estável
+lifecycleRuntimeKtx = "2.6.2" # Revertendo para uma versão estável compatível com Compose
+activityCompose = "1.8.2" # Revertendo para uma versão estável compatível com Compose
+composeBom = "2024.04.01"
+
+# NOVO: Versão do KSP (Kotlin Symbol Processing) - essencial para o Room
+ksp = "2.0.0-1.0.21"
+
+# NOVO: Versão do Room (SQLite)
+room = "2.6.1"
+
+[libraries]
+# ATUALIZADO: Referenciando a nova versão estável
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+# ATUALIZADO: Referenciando a nova versão estável
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+# ATUALIZADO: Referenciando a nova versão estável
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+# ATUALIZADO: Referenciando a nova versão estável
+androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+# ATUALIZADO: Referenciando a nova versão estável
+androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-ui-text = { group = "androidx.compose.ui", name = "ui-text" }
+
+# NOVAS BIBLIOTECAS DO ROOM
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+# NOVO PLUGIN: KSP
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

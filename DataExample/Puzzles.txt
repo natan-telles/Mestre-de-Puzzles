@@ -1,0 +1,49 @@
+# ====================================================================
+# PUZZLE 1: RESOLVIDO (1º no Ranking por Tempo e Tentativas)
+# ====================================================================
+Título: A Cifra do Relógio Quebrado
+Tempo Limite: 90
+Dica 1: O ponteiro que não se move esconde a primeira letra.
+Dica 2: A hora da morte é o inverso da vida.
+Resolvido: SIM
+Tentativas: 2
+
+# ====================================================================
+# PUZZLE 2: RESOLVIDO (Desempate por Tentativas)
+# ====================================================================
+Título: A Melodia do Orgão Assombrado
+Tempo Limite: 150
+Dica 1: O fantasma só toca quatro notas.
+Dica 2: A ordem correta está no livro de partituras rabiscado.
+Resolvido: SIM
+Tentativas: 4
+
+# ====================================================================
+# PUZZLE 3: RESOLVIDO (3º no Ranking)
+# ====================================================================
+Título: O Enigma das Velas Derretidas
+Tempo Limite: 150
+Dica 1: O número de velas acesas é a senha.
+Dica 2: A sombra do morcego indica a vela falsa.
+Resolvido: SIM
+Tentativas: 6
+
+# ====================================================================
+# PUZZLE 4: PENDENTE (Pronto para ser resolvido na demo)
+# ====================================================================
+Título: A Poção do Grimório Proibido
+Tempo Limite: 360
+Dica 1: Precisa de 3 ingredientes: um doce, um ácido, e algo que brilha.
+Dica 2: A ordem de mistura é a chave para o portão.
+Resolvido: NÃO
+Tentativas: 0
+
+# ====================================================================
+# PUZZLE 5: PENDENTE (Com dicas parciais)
+# ====================================================================
+Título: O Mapa do Tesouro Enterrado
+Tempo Limite: 600
+Dica 1: Procure pelo "X" no retrato da Duquesa.
+Dica 2: O Norte não é para onde a bússola aponta.
+Resolvido: NÃO
+Tentativas: 0
