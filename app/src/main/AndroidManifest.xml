@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    📱 ANDROID MANIFEST - CONFIGURAÇÃO PRINCIPAL DO APLICATIVO
+
+    O AndroidManifest.xml é o arquivo de configuração mais importante de um app Android.
+    Ele declara:
+    - Componentes do app (Activities, Services, etc)
+    - Permissões necessárias
+    - Ícone e nome do app
+    - Versão mínima do Android suportada
+    - Temas e configurações visuais
+
+    🎯 PROPÓSITO:
+    - Informar ao sistema Android sobre a estrutura do app
+    - Definir ponto de entrada (LAUNCHER)
+    - Configurar comportamento do app
+
+    📚 ESTRUTURA:
+    <manifest>         → Metadados do pacote
+      <application>    → Configuração do aplicativo
+        <activity>     → Declaração de telas
+          <intent-filter> → Filtros de ação
+        </activity>
+      </application>
+    </manifest>
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--
+        🏢 APPLICATION - Configuração global do aplicativo
+
+        🎬 android:name - Classe customizada da Application
+           Para inicializar recursos globais (banco de dados, container de dependências)
+
+        💾 android:allowBackup - Permite backup automático dos dados na nuvem Google
+
+        🔐 android:dataExtractionRules - Regras de backup para Android 12+ (API 31)
+
+        💾 android:fullBackupContent - Regras de backup para Android 6-11 (API 23-30)
+
+        🎨 android:icon - Ícone quadrado do app (@mipmap/ic_launcher)
+
+        📝 android:label - Nome exibido no launcher (@string/app_name)
+
+        🎨 android:roundIcon - Ícone circular (@mipmap/ic_launcher_round)
+
+        🌍 android:supportsRtl - Suporte a idiomas da direita para esquerda (RTL)
+
+        🎨 android:theme - Tema padrão do app (@style/Theme.MestreDePuzzles)
+    -->
     <application
         android:name=".MestreDePuzzlesApplication"
         android:allowBackup="true"
@@ -13,6 +60,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MestreDePuzzles"
         tools:targetApi="31">
+
+        <!--
+            🎬 ACTIVITY PRINCIPAL - MainActivity
+
+            📍 android:name - Classe da Activity (".MainActivity")
+
+            🌐 android:exported - Permite ser iniciada por outros apps ("true" obrigatório para LAUNCHER)
+
+            📝 android:label - Título da Activity (@string/app_name)
+
+            🎨 android:theme - Tema da Activity (@style/Theme.MestreDePuzzles)
+
+            🚀 INTENT FILTER:
+               - ACTION MAIN: Activity principal do app
+               - CATEGORY LAUNCHER: Aparece no launcher (ícone na tela inicial)
+        -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -20,7 +83,6 @@
             android:theme="@style/Theme.MestreDePuzzles">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
